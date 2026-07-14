@@ -1,0 +1,1302 @@
+/* ==========================================================
+   TAILWIND CSS
+========================================================== */
+
+@import "tailwindcss";
+
+/* ==========================================================
+   GOOGLE FONT
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* ==========================================================
+   TAILWIND SOURCE
+========================================================== */
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+
+@source '../../storage/framework/views/*.php';
+
+/* ==========================================================
+   TAILWIND THEME
+========================================================== */
+
+@theme {
+
+    --font-sans:
+        'Inter',
+        ui-sans-serif,
+        system-ui,
+        sans-serif,
+        'Apple Color Emoji',
+        'Segoe UI Emoji',
+        'Segoe UI Symbol',
+        'Noto Color Emoji';
+
+}
+
+/* ==========================================================
+   CORE ERP
+   GLOBAL DESIGN SYSTEM
+========================================================== */
+
+
+/* ==========================================================
+   CSS VARIABLES
+========================================================== */
+
+:root{
+
+    /* Background */
+
+    --bg-global:#f6f8fa;
+    --bg-card:#ffffff;
+
+    /* Typography */
+
+    --text-main:#1e293b;
+    --text-muted:#64748b;
+
+    /* Border */
+
+    --border-color:#e2e8f0;
+
+    /* Radius */
+
+    --radius-sm:8px;
+    --radius-md:12px;
+    --radius-lg:16px;
+    --radius-xl:22px;
+
+    /* Font */
+
+    --font-sans:'Inter',sans-serif;
+
+    /* Brand */
+
+    --primary:#4f46e5;
+    --primary-hover:#4338ca;
+
+    --secondary:#0f172a;
+    --secondary-hover:#1e293b;
+
+    /* Accent */
+
+    --green:#10b981;
+    --blue:#06b6d4;
+    --red:#f43f5e;
+    --amber:#b45309;
+
+    /* Shadow */
+
+    --shadow-sm:0 2px 8px rgba(15,23,42,.05);
+
+    --shadow-md:0 8px 24px rgba(15,23,42,.08);
+
+    --shadow-lg:0 20px 50px rgba(15,23,42,.15);
+
+    /* Transition */
+
+    --transition:.25s ease;
+
+}
+
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:var(--font-sans);
+
+    background:#dedede;
+
+    color:var(--text-main);
+
+    -webkit-font-smoothing:antialiased;
+
+    text-rendering:optimizeLegibility;
+
+    overflow-x:hidden;
+
+    padding-bottom:70px;
+
+}
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+button,
+input,
+textarea,
+select{
+
+    font:inherit;
+
+}
+
+
+/* ==========================================================
+   LAYOUT
+========================================================== */
+
+.container{
+
+    max-width:1200px;
+
+    margin:32px auto;
+
+    padding:0 24px;
+
+}
+
+.main-header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:900;
+
+    padding:16px 24px;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(14px);
+
+    -webkit-backdrop-filter:blur(14px);
+
+    border-bottom:1px solid var(--border-color);
+
+}
+
+.header-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:20px;
+
+    font-weight:800;
+
+}
+
+.logo-icon{
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:6px;
+
+    background:linear-gradient(135deg,var(--primary),var(--blue));
+
+}
+
+.logo span span{
+
+    color:var(--primary);
+
+}
+
+
+/* ==========================================================
+   PAGE
+========================================================== */
+
+.page-header{
+
+    margin:12px 0;
+
+}
+
+.page-title{
+
+    font-size:22px;
+
+    font-weight:800;
+
+    color:var(--secondary);
+
+}
+
+.page-subtitle{
+
+    color:#c50000;
+
+    font-size:15px;
+
+}
+
+.page-subtitle.company-name{
+
+    position:absolute;
+
+    right:18px;
+
+    top:12px;
+
+    font-size:15px;
+
+}
+/* ==========================================================
+   CORE ERP DESIGN SYSTEM
+========================================================== */
+
+:root{
+
+    --bg-global:#f5f7fb;
+    --bg-card:#ffffff;
+
+    --text-main:#1e293b;
+    --text-muted:#64748b;
+
+    --border-color:#e2e8f0;
+
+    --radius-sm:10px;
+    --radius-md:16px;
+    --radius-lg:24px;
+
+    --shadow-sm:0 3px 10px rgba(15,23,42,.05);
+    --shadow-md:0 10px 30px rgba(15,23,42,.08);
+    --shadow-lg:0 18px 45px rgba(15,23,42,.12);
+
+    --primary:#4f46e5;
+    --primary-hover:#4338ca;
+
+    --secondary:#0f172a;
+
+    --green:#10b981;
+    --red:#ef4444;
+    --orange:#f59e0b;
+    --blue:#3b82f6;
+    --cyan:#06b6d4;
+
+}
+
+
+/* ==========================================================
+   GLOBAL RESET
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:var(--bg-global);
+
+    color:var(--text-main);
+
+    font-family:var(--font-sans);
+
+    -webkit-font-smoothing:antialiased;
+
+    text-rendering:optimizeLegibility;
+
+    min-height:100vh;
+
+    padding-bottom:90px;
+
+}
+
+
+/* ==========================================================
+   GLOBAL LINKS
+========================================================== */
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+
+/* ==========================================================
+   MAIN HEADER
+========================================================== */
+
+.main-header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:500;
+
+    background:rgba(255,255,255,.86);
+
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid var(--border-color);
+
+}
+
+.header-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:14px 22px;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-weight:800;
+
+    font-size:20px;
+
+}
+
+.logo-icon{
+
+    width:38px;
+
+    height:38px;
+
+    border-radius:12px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--cyan)
+    );
+
+}
+
+.logo span span{
+
+    color:var(--primary);
+
+}
+
+.page-subtitle{
+
+    font-size:14px;
+
+    color:#d11d1d;
+
+}
+
+
+/* ==========================================================
+   MAIN CONTAINER
+========================================================== */
+
+.container{
+
+    max-width:1200px;
+
+    margin:28px auto;
+
+    padding:0 20px;
+
+}
+
+
+/* ==========================================================
+   PAGE TITLE
+========================================================== */
+
+.page-header{
+
+    margin-bottom:18px;
+
+}
+
+.page-title{
+
+    font-size:24px;
+
+    font-weight:800;
+
+}
+
+.page-description{
+
+    color:var(--text-muted);
+
+    margin-top:4px;
+
+}
+/* ==========================================================
+   BUTTON SYSTEM
+========================================================== */
+
+.button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:11px 18px;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+    text-decoration:none;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.button:active{
+
+    transform:translateY(0);
+
+}
+
+.btn-blue{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.btn-blue:hover{
+
+    background:var(--primary-hover);
+
+}
+
+.btn-green{
+
+    background:var(--green);
+
+    color:#fff;
+
+}
+
+.btn-red{
+
+    background:var(--red);
+
+    color:#fff;
+
+}
+
+.btn-brown{
+
+    background:#b45309;
+
+    color:#fff;
+
+}
+
+.btn-grey{
+
+    background:#f1f5f9;
+
+    color:#334155;
+
+}
+
+
+/* ==========================================================
+   BADGE
+========================================================== */
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:5px 12px;
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+.badge-purple{
+
+    background:#e0e7ff;
+
+    color:#4338ca;
+
+}
+
+.badge-gray{
+
+    background:#f1f5f9;
+
+    color:#64748b;
+
+}
+
+.badge-success{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+}
+
+.badge-warning{
+
+    background:#fef3c7;
+
+    color:#b45309;
+
+}
+
+.badge-danger{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+}
+
+
+/* ==========================================================
+   GLOBAL CARD
+========================================================== */
+
+.card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    border:1px solid var(--border-color);
+
+    box-shadow:var(--shadow-sm);
+
+    margin-bottom:18px;
+
+}
+
+.card-title{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    margin-bottom:14px;
+
+}
+
+.card-subtitle{
+
+    color:var(--text-muted);
+
+    font-size:14px;
+
+}
+
+
+/* ==========================================================
+   COMPANY AVATAR
+========================================================== */
+
+.company-avatar{
+
+    width:54px;
+
+    height:54px;
+
+    border-radius:16px;
+
+    background:linear-gradient(
+        135deg,
+        #dbeafe,
+        #eff6ff
+    );
+
+    color:var(--primary);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:18px;
+
+    font-weight:800;
+
+}
+
+
+/* ==========================================================
+   PAGE GRID
+========================================================== */
+
+.grid-2{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.grid-3{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+
+}
+
+.grid-4{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+
+}
+
+
+/* ==========================================================
+   TEXT HELPERS
+========================================================== */
+
+.text-muted{
+
+    color:var(--text-muted);
+
+}
+
+.text-success{
+
+    color:var(--green);
+
+}
+
+.text-danger{
+
+    color:var(--red);
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.text-right{
+
+    text-align:right;
+
+}
+
+.fw-bold{
+
+    font-weight:700;
+
+}
+
+
+/* ==========================================================
+   SPACING HELPERS
+========================================================== */
+
+.mt-1{margin-top:6px;}
+.mt-2{margin-top:12px;}
+.mt-3{margin-top:18px;}
+.mt-4{margin-top:24px;}
+
+.mb-1{margin-bottom:6px;}
+.mb-2{margin-bottom:12px;}
+.mb-3{margin-bottom:18px;}
+.mb-4{margin-bottom:24px;}
+
+/* ==========================================================
+   TABLE SYSTEM
+========================================================== */
+
+.table-wrapper{
+
+    background:#fff;
+
+    border:1px solid var(--border-color);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.table thead{
+
+    background:#f8fafc;
+
+}
+
+.table th{
+
+    padding:16px;
+
+    text-align:left;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    color:var(--text-muted);
+
+    border-bottom:1px solid var(--border-color);
+
+}
+
+.table td{
+
+    padding:16px;
+
+    border-bottom:1px solid #edf2f7;
+
+    vertical-align:middle;
+
+    font-size:14px;
+
+}
+
+.table tbody tr{
+
+    transition:.25s;
+
+}
+
+.table tbody tr:hover{
+
+    background:#fafcff;
+
+}
+
+.table tbody tr:last-child td{
+
+    border-bottom:none;
+
+}
+
+
+/* ==========================================================
+   PAGINATION
+========================================================== */
+
+.pagination-wrapper{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    margin-top:24px;
+
+}
+
+.inline-flex.rtl\:flex-row-reverse.shadow-sm.rounded-md{
+
+    display:none;
+
+}
+
+
+/* ==========================================================
+   ALERT
+========================================================== */
+
+.alert{
+
+    position:fixed;
+
+    top:24px;
+
+    right:24px;
+
+    min-width:320px;
+
+    padding:16px 20px;
+
+    border-radius:16px;
+
+    font-weight:600;
+
+    box-shadow:var(--shadow-md);
+
+    z-index:9999;
+
+    animation:fadeIn .3s;
+
+}
+
+.alert-success{
+
+    background:#ecfdf5;
+
+    color:#065f46;
+
+    border:1px solid #6ee7b7;
+
+}
+
+.alert-error{
+
+    background:#fef2f2;
+
+    color:#991b1b;
+
+    border:1px solid #fecaca;
+
+}
+
+.alert.hide{
+
+    opacity:0;
+
+    transform:translateY(-15px);
+
+    transition:.35s;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   SESSION LOCK
+========================================================== */
+
+.session-lock{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(15,23,42,.55);
+
+    backdrop-filter:blur(6px);
+
+    z-index:99999;
+
+}
+
+.session-lock.show{
+
+    display:flex;
+
+}
+
+.lock-card{
+
+    width:min(420px,92%);
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:32px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.lock-icon{
+
+    font-size:58px;
+
+    margin-bottom:12px;
+
+}
+
+.lock-title{
+
+    font-size:24px;
+
+    font-weight:800;
+
+}
+
+.lock-text{
+
+    color:var(--text-muted);
+
+    margin:14px 0 22px;
+
+}
+
+.lock-counter{
+
+    font-size:54px;
+
+    font-weight:800;
+
+    color:var(--red);
+
+    margin-bottom:20px;
+
+}
+
+.lock-button{
+
+    width:100%;
+
+}
+
+
+/* ==========================================================
+   CONFIRM MODAL
+========================================================== */
+
+.confirm-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+}
+
+.confirm-modal.show{
+
+    display:flex;
+
+}
+
+.confirm-card{
+
+    width:min(400px,92%);
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:30px;
+
+    text-align:center;
+
+    animation:popup .25s;
+
+}
+
+.confirm-icon{
+
+    font-size:52px;
+
+    margin-bottom:10px;
+
+}
+
+.confirm-title{
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+.confirm-message{
+
+    color:var(--text-muted);
+
+    margin:18px 0 24px;
+
+    line-height:1.7;
+
+}
+
+.confirm-buttons{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.confirm-buttons .button{
+
+    flex:1;
+
+}
+
+@keyframes popup{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.85);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:768px){
+
+    .container{
+
+        padding:0 14px;
+
+        margin:18px auto;
+
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .table thead{
+
+        display:none;
+
+    }
+
+    .table,
+    .table tbody,
+    .table tr,
+    .table td{
+
+        display:block;
+
+        width:100%;
+
+    }
+
+    .table tr{
+
+        background:#fff;
+
+        border:1px solid var(--border-color);
+
+        border-radius:18px;
+
+        margin-bottom:18px;
+
+        padding:10px 14px;
+
+        box-shadow:var(--shadow-sm);
+
+    }
+
+    .table td{
+
+        display:flex;
+
+        justify-content:space-between;
+
+        align-items:center;
+
+        border:none;
+
+        border-bottom:1px dashed #dbe4ef;
+
+        padding:12px 0;
+
+        text-align:right;
+
+    }
+
+    .table td:last-child{
+
+        border-bottom:none;
+
+    }
+
+    .table td::before{
+
+        content:attr(data-label);
+
+        font-size:11px;
+
+        font-weight:700;
+
+        color:var(--text-muted);
+
+        text-transform:uppercase;
+
+    }
+
+    .alert{
+
+        left:12px;
+
+        right:12px;
+
+        min-width:auto;
+
+    }
+
+}
