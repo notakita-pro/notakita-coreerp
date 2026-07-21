@@ -117,16 +117,21 @@
     <div class="admin-grid">
 
         {{-- AI MONITORING --}}
-        <div class="admin-card">
-            <span class="coming-badge">Soon</span>
-            <div class="admin-icon">🤖</div>
-            <div>
-                <h4>AI Monitoring</h4>
-                <p>Monitoring AI Advisor, AI Assistant, OCR AI, dan seluruh proses Artificial Intelligence CoreERP.</p>
-            </div>
-        </div>
+<a href="{{ route('admin.ai.monitoring') }}" class="admin-card">
 
-        {{-- OCR QUEUE (FIXED HTML & ROUTE) --}}
+    <div class="admin-icon">🤖</div>
+
+    <div>
+        <h4>AI Monitoring</h4>
+
+        <p>
+            Monitoring AI Advisor, AI Assistant,
+            OCR AI, dan seluruh proses
+            Artificial Intelligence CoreERP.
+        </p>
+    </div>
+
+</a> {{-- OCR QUEUE (FIXED HTML & ROUTE) --}}
         <a href="{{ route('admin.gemini.index') }}" class="admin-card">
             <div class="admin-icon">📄</div>
             <div>
